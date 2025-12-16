@@ -126,9 +126,9 @@ export const servicesData: Record<string, ServiceDetail> = {
     ],
     image: "/images/services/garden-rooms.webp",
     gallery: [
-      "/images/portfolio/garden-room-1.webp",
-      "/images/portfolio/garden-room-2.webp",
-      "/images/portfolio/garden-room-3.webp",
+      "/images/portfolio/garden-transformation.webp",
+      "/images/portfolio/garden-design.webp",
+      "/images/portfolio/landscaping-2.webp",
     ],
   },
   patios: {
@@ -192,8 +192,8 @@ export const servicesData: Record<string, ServiceDetail> = {
     image: "/images/services/patios.webp",
     gallery: [
       "/images/portfolio/patio-1.webp",
-      "/images/portfolio/patio-2.webp",
-      "/images/portfolio/hot-tub-deck.webp",
+      "/images/portfolio/landscaping-1.webp",
+      "/images/portfolio/garden-design.webp",
     ],
   },
   fencing: {
@@ -257,8 +257,8 @@ export const servicesData: Record<string, ServiceDetail> = {
     image: "/images/services/fencing.webp",
     gallery: [
       "/images/portfolio/fence-project-1.webp",
-      "/images/portfolio/modern-fence.webp",
       "/images/portfolio/fence-installation.webp",
+      "/images/portfolio/landscaping-2.webp",
     ],
   },
 };

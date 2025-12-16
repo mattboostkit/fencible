@@ -29,15 +29,6 @@ const portfolioItems = [
   },
   {
     id: "2",
-    title: "Bespoke Garden Room",
-    description:
-      "Beautifully crafted garden room perfect for a home office or relaxation space.",
-    service: "Garden Rooms",
-    location: "Leighton Buzzard",
-    image: "/images/portfolio/garden-room-1.webp",
-  },
-  {
-    id: "3",
     title: "Premium Patio Installation",
     description:
       "Elegant patio design with quality materials and expert craftsmanship.",
@@ -46,13 +37,22 @@ const portfolioItems = [
     image: "/images/portfolio/patio-1.webp",
   },
   {
-    id: "4",
+    id: "3",
     title: "Contemporary Fencing",
     description:
       "Modern fencing solution providing privacy, security, and style.",
     service: "Fencing",
     location: "Dunstable",
     image: "/images/portfolio/fence-project-1.webp",
+  },
+  {
+    id: "4",
+    title: "Quality Fence Installation",
+    description:
+      "Professional fence installation with attention to detail and durability.",
+    service: "Fencing",
+    location: "Eaton Bray",
+    image: "/images/portfolio/fence-installation.webp",
   },
   {
     id: "5",
@@ -65,39 +65,30 @@ const portfolioItems = [
   },
   {
     id: "6",
-    title: "Hot Tub Decking",
+    title: "Complete Landscaping Project",
     description:
-      "Custom decking project designed to accommodate a hot tub with style.",
-    service: "Patios",
-    location: "Tring",
-    image: "/images/portfolio/hot-tub-deck.webp",
+      "Full landscaping transformation with beautiful planting and hardscaping.",
+    service: "Garden Renovation",
+    location: "Leighton Buzzard",
+    image: "/images/portfolio/landscaping-1.webp",
   },
   {
     id: "7",
-    title: "Quality Fence Installation",
+    title: "Garden Border Design",
     description:
-      "Professional fence installation with attention to detail and durability.",
-    service: "Fencing",
-    location: "Eaton Bray",
-    image: "/images/portfolio/modern-fence.webp",
+      "Professionally designed garden borders enhancing outdoor living space.",
+    service: "Garden Renovation",
+    location: "Tring",
+    image: "/images/portfolio/landscaping-2.webp",
   },
   {
     id: "8",
-    title: "Garden Room with Bi-Fold Doors",
+    title: "Bespoke Garden Design",
     description:
-      "Spacious garden room featuring large bi-fold doors for indoor-outdoor living.",
-    service: "Garden Rooms",
-    location: "Berkhamsted",
-    image: "/images/portfolio/garden-room-2.webp",
-  },
-  {
-    id: "9",
-    title: "Complete Garden Design",
-    description:
-      "Full garden renovation including landscaping, patio, and planting.",
+      "Custom garden design tailored to the client's vision and lifestyle.",
     service: "Garden Renovation",
     location: "Milton Keynes",
-    image: "/images/portfolio/landscaping-1.webp",
+    image: "/images/portfolio/garden-design.webp",
   },
 ];
 
