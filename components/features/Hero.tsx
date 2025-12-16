@@ -27,11 +27,12 @@ export function Hero({
           alt="Beautiful garden transformation by Fencible"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-center"
           sizes="100vw"
+          quality={100}
         />
-        {/* Overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-bg-primary/95 via-bg-primary/80 to-bg-primary/60 dark:from-bg-primary/95 dark:via-bg-primary/85 dark:to-bg-primary/70" />
+        {/* Subtle overlay for text readability - image remains prominent */}
+        <div className="absolute inset-0 bg-gradient-to-r from-bg-primary/70 via-bg-primary/40 to-transparent dark:from-bg-primary/80 dark:via-bg-primary/50 dark:to-bg-primary/20" />
       </div>
 
       {/* Decorative elements */}
