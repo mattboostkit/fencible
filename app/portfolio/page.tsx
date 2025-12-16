@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
@@ -16,61 +17,87 @@ export const metadata: Metadata = {
   },
 };
 
-// Placeholder portfolio items - replace with real projects
 const portfolioItems = [
   {
     id: "1",
     title: "Modern Garden Transformation",
     description:
-      "Complete garden renovation featuring a contemporary patio and planting scheme.",
+      "Complete garden renovation featuring a contemporary design with new lawn and planting scheme.",
     service: "Garden Renovation",
     location: "Milton Keynes",
-    image: "/images/portfolio/project-1.jpg",
+    image: "/images/portfolio/garden-transformation.webp",
   },
   {
     id: "2",
-    title: "Home Office Garden Room",
+    title: "Bespoke Garden Room",
     description:
-      "Bespoke insulated garden room with full electrical installation.",
+      "Beautifully crafted garden room perfect for a home office or relaxation space.",
     service: "Garden Rooms",
     location: "Leighton Buzzard",
-    image: "/images/portfolio/project-2.jpg",
+    image: "/images/portfolio/garden-room-1.webp",
   },
   {
     id: "3",
-    title: "Natural Stone Patio",
+    title: "Premium Patio Installation",
     description:
-      "Large Indian sandstone patio with integrated lighting and drainage.",
+      "Elegant patio design with quality materials and expert craftsmanship.",
     service: "Patios",
     location: "Berkhamsted",
-    image: "/images/portfolio/project-3.jpg",
+    image: "/images/portfolio/patio-1.webp",
   },
   {
     id: "4",
-    title: "Contemporary Slatted Fencing",
+    title: "Contemporary Fencing",
     description:
-      "Modern horizontal slat fencing providing privacy and style.",
+      "Modern fencing solution providing privacy, security, and style.",
     service: "Fencing",
     location: "Dunstable",
-    image: "/images/portfolio/project-4.jpg",
+    image: "/images/portfolio/fence-project-1.webp",
   },
   {
     id: "5",
-    title: "Family Garden Design",
+    title: "New Lawn Installation",
     description:
-      "Child-friendly garden with lawn, patio area, and secure fencing.",
+      "Fresh lawn installation transforming an outdoor space into a beautiful garden.",
     service: "Garden Renovation",
     location: "Woburn Sands",
-    image: "/images/portfolio/project-5.jpg",
+    image: "/images/portfolio/lawn-project.webp",
   },
   {
     id: "6",
-    title: "Luxury Garden Room Studio",
+    title: "Hot Tub Decking",
     description:
-      "Large garden room with bi-fold doors and underfloor heating.",
-    service: "Garden Rooms",
+      "Custom decking project designed to accommodate a hot tub with style.",
+    service: "Patios",
     location: "Tring",
-    image: "/images/portfolio/project-6.jpg",
+    image: "/images/portfolio/hot-tub-deck.webp",
+  },
+  {
+    id: "7",
+    title: "Quality Fence Installation",
+    description:
+      "Professional fence installation with attention to detail and durability.",
+    service: "Fencing",
+    location: "Eaton Bray",
+    image: "/images/portfolio/modern-fence.webp",
+  },
+  {
+    id: "8",
+    title: "Garden Room with Bi-Fold Doors",
+    description:
+      "Spacious garden room featuring large bi-fold doors for indoor-outdoor living.",
+    service: "Garden Rooms",
+    location: "Berkhamsted",
+    image: "/images/portfolio/garden-room-2.webp",
+  },
+  {
+    id: "9",
+    title: "Complete Garden Design",
+    description:
+      "Full garden renovation including landscaping, patio, and planting.",
+    service: "Garden Renovation",
+    location: "Milton Keynes",
+    image: "/images/portfolio/landscaping-1.webp",
   },
 ];
 
@@ -136,28 +163,15 @@ export default function PortfolioPage() {
                 key={item.id}
                 className="group bg-bg-tertiary rounded-xl border border-border-subtle overflow-hidden hover:border-accent-primary/50 transition-all"
               >
-                {/* Placeholder image */}
+                {/* Project image */}
                 <div className="aspect-[4/3] bg-bg-secondary relative overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center p-4">
-                      <svg
-                        className="w-12 h-12 text-text-tertiary mx-auto mb-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                        />
-                      </svg>
-                      <p className="text-xs text-text-tertiary">
-                        Project photo coming soon
-                      </p>
-                    </div>
-                  </div>
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
                   {/* Overlay on hover */}
                   <div className="absolute inset-0 bg-accent-primary/0 group-hover:bg-accent-primary/10 transition-colors" />
                 </div>
@@ -180,14 +194,13 @@ export default function PortfolioPage() {
             ))}
           </div>
 
-          {/* Coming soon message */}
+          {/* Social media follow */}
           <div className="text-center mt-12 p-8 bg-bg-secondary rounded-xl border border-border-subtle">
             <h3 className="text-xl font-semibold text-text-primary mb-2">
-              More Projects Coming Soon
+              Follow Our Work
             </h3>
             <p className="text-text-secondary mb-4">
-              We&apos;re building our portfolio. Follow us on social media to see
-              our latest work!
+              See our latest projects and behind-the-scenes content on social media.
             </p>
             <div className="flex justify-center gap-4">
               <a

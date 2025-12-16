@@ -59,11 +59,11 @@ export const servicesData: Record<string, ServiceDetail> = {
           "We provide detailed aftercare instructions for all new planting, including watering schedules and seasonal maintenance tips. New lawns require regular watering for the first few weeks. We're always happy to answer questions after the project is complete.",
       },
     ],
-    image: "/images/services/garden-renovation.jpg",
+    image: "/images/services/garden-renovation.webp",
     gallery: [
-      "/images/services/garden-renovation-1.jpg",
-      "/images/services/garden-renovation-2.jpg",
-      "/images/services/garden-renovation-3.jpg",
+      "/images/portfolio/garden-transformation.webp",
+      "/images/portfolio/lawn-project.webp",
+      "/images/portfolio/landscaping-1.webp",
     ],
   },
   "garden-rooms": {
@@ -124,11 +124,11 @@ export const servicesData: Record<string, ServiceDetail> = {
           "Garden rooms require minimal maintenance. We recommend annual checks on seals and drainage, occasional cleaning of external cladding, and keeping gutters clear. We provide a full maintenance guide upon completion.",
       },
     ],
-    image: "/images/services/garden-rooms.jpg",
+    image: "/images/services/garden-rooms.webp",
     gallery: [
-      "/images/services/garden-rooms-1.jpg",
-      "/images/services/garden-rooms-2.jpg",
-      "/images/services/garden-rooms-3.jpg",
+      "/images/portfolio/garden-room-1.webp",
+      "/images/portfolio/garden-room-2.webp",
+      "/images/portfolio/garden-room-3.webp",
     ],
   },
   patios: {
@@ -189,11 +189,11 @@ export const servicesData: Record<string, ServiceDetail> = {
           "Regular sweeping and occasional jet washing keeps most patios looking great. We recommend re-sanding joints on block paving every few years and applying sealant to natural stone if desired. We provide specific care instructions for your patio material.",
       },
     ],
-    image: "/images/services/patios.jpg",
+    image: "/images/services/patios.webp",
     gallery: [
-      "/images/services/patios-1.jpg",
-      "/images/services/patios-2.jpg",
-      "/images/services/patios-3.jpg",
+      "/images/portfolio/patio-1.webp",
+      "/images/portfolio/patio-2.webp",
+      "/images/portfolio/hot-tub-deck.webp",
     ],
   },
   fencing: {
@@ -254,11 +254,11 @@ export const servicesData: Record<string, ServiceDetail> = {
           "We recommend treating timber panels with preservative every 2-3 years to maximise lifespan. Keep the base clear of soil buildup, and check for any loose panels after storms. Concrete posts and gravel boards are maintenance-free.",
       },
     ],
-    image: "/images/services/fencing.jpg",
+    image: "/images/services/fencing.webp",
     gallery: [
-      "/images/services/fencing-1.jpg",
-      "/images/services/fencing-2.jpg",
-      "/images/services/fencing-3.jpg",
+      "/images/portfolio/fence-project-1.webp",
+      "/images/portfolio/modern-fence.webp",
+      "/images/portfolio/fence-installation.webp",
     ],
   },
 };
