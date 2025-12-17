@@ -1,21 +1,24 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Fraunces, Outfit } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { siteConfig } from "@/data/site";
 import { ThemeProvider } from "@/lib/theme-context";
 
-const inter = Inter({
-  variable: "--font-inter",
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
   display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  variable: "--font-plus-jakarta-sans",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
   display: "swap",
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -84,7 +87,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-GB" className={`${inter.variable} ${plusJakartaSans.variable} light`} suppressHydrationWarning>
+    <html lang="en-GB" className={`${outfit.variable} ${fraunces.variable} dark`} suppressHydrationWarning>
       <head>
         {/* Inline script to set theme before page renders to prevent flash */}
         <script
@@ -93,9 +96,9 @@ export default function RootLayout({
               (function() {
                 try {
                   var theme = localStorage.getItem('fencible-theme');
-                  if (theme === 'dark') {
-                    document.documentElement.classList.remove('light');
-                    document.documentElement.classList.add('dark');
+                  if (theme === 'light') {
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.classList.add('light');
                   }
                 } catch (e) {}
               })();

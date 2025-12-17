@@ -15,7 +15,7 @@ interface ServiceCardProps {
 const icons = {
   Leaf: (
     <svg
-      className="w-8 h-8"
+      className="w-7 h-7"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -30,7 +30,7 @@ const icons = {
   ),
   Home: (
     <svg
-      className="w-8 h-8"
+      className="w-7 h-7"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -45,7 +45,7 @@ const icons = {
   ),
   Grid: (
     <svg
-      className="w-8 h-8"
+      className="w-7 h-7"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -60,7 +60,7 @@ const icons = {
   ),
   Fence: (
     <svg
-      className="w-8 h-8"
+      className="w-7 h-7"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -73,6 +73,13 @@ const icons = {
       />
     </svg>
   ),
+};
+
+const iconColors = {
+  Leaf: "text-accent-moss bg-accent-moss/10",
+  Home: "text-accent-gold bg-accent-gold/10",
+  Grid: "text-accent-primary bg-accent-primary/10",
+  Fence: "text-accent-forest bg-accent-forest/10 dark:text-accent-moss dark:bg-accent-moss/10",
 };
 
 export function ServiceCard({
@@ -89,33 +96,42 @@ export function ServiceCard({
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <Link href={href} className="block group">
-        <Card hover padding="lg" className="h-full">
-          <div className="text-accent-primary mb-4 group-hover:scale-110 transition-transform duration-300">
-            {icons[icon]}
+      <Link href={href} className="block group h-full">
+        <Card hover padding="lg" className="h-full relative overflow-hidden">
+          {/* Subtle gradient overlay on hover */}
+          <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/0 to-accent-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+          <div className="relative">
+            {/* Icon with coloured background */}
+            <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110 ${iconColors[icon]}`}>
+              {icons[icon]}
+            </div>
+
+            <h3 className="text-xl font-medium text-text-primary mb-3 group-hover:text-accent-primary transition-colors">
+              {title}
+            </h3>
+            <p className="text-text-secondary text-sm leading-relaxed mb-5">
+              {description}
+            </p>
+
+            {/* Learn more link */}
+            <span className="inline-flex items-center text-accent-primary text-sm font-medium group-hover:gap-2 transition-all">
+              Learn more
+              <svg
+                className="ml-1 w-4 h-4 transition-transform group-hover:translate-x-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </span>
           </div>
-          <h3 className="text-xl font-semibold text-text-primary mb-2 group-hover:text-accent-primary transition-colors">
-            {title}
-          </h3>
-          <p className="text-text-secondary text-sm leading-relaxed mb-4">
-            {description}
-          </p>
-          <span className="inline-flex items-center text-accent-primary text-sm font-medium">
-            Learn more
-            <svg
-              className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </span>
         </Card>
       </Link>
     </motion.div>

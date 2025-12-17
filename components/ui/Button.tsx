@@ -4,7 +4,7 @@ import { cn } from "@/lib/cn";
 import { forwardRef, ButtonHTMLAttributes } from "react";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "outline" | "ghost";
+  variant?: "primary" | "secondary" | "outline" | "ghost" | "moss";
   size?: "sm" | "md" | "lg";
   isLoading?: boolean;
 }
@@ -23,23 +23,25 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const baseStyles =
-      "inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary disabled:opacity-50 disabled:cursor-not-allowed";
+      "inline-flex items-center justify-center font-semibold rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary disabled:opacity-50 disabled:cursor-not-allowed hover-lift";
 
     const variants = {
       primary:
-        "bg-accent-primary text-bg-primary hover:bg-accent-secondary active:scale-[0.98]",
+        "bg-accent-primary text-white hover:bg-accent-secondary shadow-md hover:shadow-lg",
       secondary:
-        "bg-bg-tertiary text-text-primary hover:bg-border-subtle active:scale-[0.98]",
+        "bg-accent-moss text-white hover:bg-accent-forest shadow-md hover:shadow-lg",
       outline:
-        "border-2 border-accent-primary text-accent-primary hover:bg-accent-primary hover:text-bg-primary active:scale-[0.98]",
+        "border-2 border-accent-primary text-accent-primary hover:bg-accent-primary hover:text-white",
       ghost:
-        "text-text-secondary hover:text-text-primary hover:bg-bg-tertiary active:scale-[0.98]",
+        "text-text-secondary hover:text-text-primary hover:bg-bg-tertiary",
+      moss:
+        "bg-accent-moss/10 text-accent-moss border border-accent-moss/20 hover:bg-accent-moss hover:text-white",
     };
 
     const sizes = {
-      sm: "px-4 py-2 text-sm",
-      md: "px-6 py-3 text-base",
-      lg: "px-8 py-4 text-lg",
+      sm: "px-5 py-2.5 text-sm",
+      md: "px-7 py-3.5 text-base",
+      lg: "px-9 py-4.5 text-lg",
     };
 
     return (

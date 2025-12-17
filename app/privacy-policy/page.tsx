@@ -33,7 +33,7 @@ export default function PrivacyPolicyPage() {
             Privacy Policy
           </h1>
           <p className="text-text-secondary mb-8">
-            Last updated: December 2024
+            Last updated: December 2025
           </p>
 
           <div className="prose prose-invert max-w-none space-y-8">

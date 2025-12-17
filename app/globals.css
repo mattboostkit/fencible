@@ -1,87 +1,95 @@
 @import "tailwindcss";
 
-/* Light Mode (Default) - Fresh, natural garden theme */
+/* ═══════════════════════════════════════════════════════════════════════════
+   FENCIBLE - "Earth & Ember" Design System
+   A bold, organic luxury aesthetic for outdoor transformation
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Light Mode (Default) - Warm earth tones with striking terracotta */
 :root,
 .light {
-  /* Background Colours - Soft, natural whites with subtle warmth */
-  --bg-primary: #fafcf8;
-  --bg-secondary: #f1f5ed;
-  --bg-tertiary: #e8efe3;
+  /* Background Colours - Warm creams and stone */
+  --bg-primary: #faf8f5;
+  --bg-secondary: #f3efe9;
+  --bg-tertiary: #e8e2da;
 
-  /* Accent Colours - Natural greens */
-  --accent-primary: #16a34a;
-  --accent-secondary: #15803d;
-  --accent-gold: #d97706;
+  /* Accent Colours - Earth & Ember */
+  --accent-primary: #c45d3a;      /* Terracotta - bold, warm */
+  --accent-secondary: #a84e30;    /* Deeper terracotta */
+  --accent-moss: #4a6741;         /* Rich forest moss */
+  --accent-gold: #b8860b;         /* Dark goldenrod */
+  --accent-forest: #1a3a2f;       /* Deep forest green */
 
-  /* Text Colours - Deep, readable dark greens/greys */
-  --text-primary: #1a2e1a;
-  --text-secondary: #4a5d4a;
-  --text-tertiary: #6b7c6b;
+  /* Text Colours - Rich charcoal with warmth */
+  --text-primary: #2a2825;
+  --text-secondary: #5a5550;
+  --text-tertiary: #8a847c;
 
   /* Borders */
-  --border-subtle: #d4e0d4;
-  --border-accent: #16a34a;
+  --border-subtle: #d8d2ca;
+  --border-accent: var(--accent-primary);
 
   /* Glass effect for light mode */
-  --glass-bg: rgba(255, 255, 255, 0.85);
-  --glass-border: rgba(22, 163, 74, 0.15);
+  --glass-bg: rgba(250, 248, 245, 0.9);
+  --glass-border: rgba(196, 93, 58, 0.12);
 
-  /* Shadows for depth */
-  --shadow-sm: 0 1px 2px rgba(26, 46, 26, 0.05);
-  --shadow-md: 0 4px 6px rgba(26, 46, 26, 0.07);
-  --shadow-lg: 0 10px 15px rgba(26, 46, 26, 0.1);
+  /* Shadows for depth - warmer tones */
+  --shadow-sm: 0 1px 2px rgba(42, 40, 37, 0.06);
+  --shadow-md: 0 4px 12px rgba(42, 40, 37, 0.08);
+  --shadow-lg: 0 12px 32px rgba(42, 40, 37, 0.12);
+  --shadow-xl: 0 24px 48px rgba(42, 40, 37, 0.16);
 
-  /* Legacy support */
-  --background: var(--bg-primary);
-  --foreground: var(--text-primary);
+  /* Grain overlay opacity */
+  --grain-opacity: 0.03;
 }
 
-/* Dark Mode */
+/* Dark Mode - Deep charcoal with warm accents */
 .dark {
   /* Background Colours */
-  --bg-primary: #0f1419;
-  --bg-secondary: #1a1f26;
-  --bg-tertiary: #242b33;
+  --bg-primary: #1a1916;
+  --bg-secondary: #242220;
+  --bg-tertiary: #2e2c28;
 
   /* Accent Colours */
-  --accent-primary: #4ade80;
-  --accent-secondary: #22c55e;
-  --accent-gold: #fbbf24;
+  --accent-primary: #e07858;      /* Bright terracotta */
+  --accent-secondary: #f09070;    /* Lighter terracotta */
+  --accent-moss: #7fb069;         /* Bright moss */
+  --accent-gold: #d4a84b;         /* Warm gold */
+  --accent-forest: #5a8a6a;       /* Lighter forest */
 
   /* Text Colours */
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-tertiary: #64748b;
+  --text-primary: #f5f2ed;
+  --text-secondary: #b8b2a8;
+  --text-tertiary: #7a756d;
 
   /* Borders */
-  --border-subtle: #2d3748;
-  --border-accent: #4ade80;
+  --border-subtle: #3a3835;
+  --border-accent: var(--accent-primary);
 
   /* Glass effect for dark mode */
-  --glass-bg: rgba(26, 31, 38, 0.85);
-  --glass-border: rgba(74, 222, 128, 0.15);
+  --glass-bg: rgba(36, 34, 32, 0.92);
+  --glass-border: rgba(224, 120, 88, 0.15);
 
   /* Shadows for depth */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --shadow-xl: 0 24px 48px rgba(0, 0, 0, 0.55);
 
-  /* Legacy support */
-  --background: var(--bg-primary);
-  --foreground: var(--text-primary);
+  /* Grain overlay opacity */
+  --grain-opacity: 0.04;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-
   /* Custom colours for Tailwind */
   --color-bg-primary: var(--bg-primary);
   --color-bg-secondary: var(--bg-secondary);
   --color-bg-tertiary: var(--bg-tertiary);
   --color-accent-primary: var(--accent-primary);
   --color-accent-secondary: var(--accent-secondary);
+  --color-accent-moss: var(--accent-moss);
   --color-accent-gold: var(--accent-gold);
+  --color-accent-forest: var(--accent-forest);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-text-tertiary: var(--text-tertiary);
@@ -89,11 +97,14 @@
   --color-border-accent: var(--border-accent);
 
   /* Font families */
-  --font-sans: var(--font-inter);
-  --font-heading: var(--font-plus-jakarta-sans);
+  --font-sans: var(--font-outfit);
+  --font-heading: var(--font-fraunces);
 }
 
-/* Base styles */
+/* ═══════════════════════════════════════════════════════════════════════════
+   Base Styles
+   ═══════════════════════════════════════════════════════════════════════════ */
+
 html {
   scroll-behavior: smooth;
 }
@@ -101,15 +112,29 @@ html {
 body {
   background: var(--bg-primary);
   color: var(--text-primary);
-  font-family: var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-outfit), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
 }
 
-/* Heading font */
+/* Subtle grain texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: var(--grain-opacity);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Heading font - elegant serif */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-plus-jakarta-sans), system-ui, sans-serif;
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
 }
 
 /* Selection styles */
@@ -124,11 +149,14 @@ h1, h2, h3, h4, h5, h6 {
   outline-offset: 2px;
 }
 
-/* Scrollbar styles - Light mode */
+/* ═══════════════════════════════════════════════════════════════════════════
+   Scrollbar Styles
+   ═══════════════════════════════════════════════════════════════════════════ */
+
 .light::-webkit-scrollbar,
 .light ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 }
 
 .light::-webkit-scrollbar-track,
@@ -139,7 +167,8 @@ h1, h2, h3, h4, h5, h6 {
 .light::-webkit-scrollbar-thumb,
 .light ::-webkit-scrollbar-thumb {
   background: var(--border-subtle);
-  border-radius: 4px;
+  border-radius: 5px;
+  border: 2px solid var(--bg-secondary);
 }
 
 .light::-webkit-scrollbar-thumb:hover,
@@ -147,11 +176,10 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--text-tertiary);
 }
 
-/* Scrollbar styles - Dark mode */
 .dark::-webkit-scrollbar,
 .dark ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 }
 
 .dark::-webkit-scrollbar-track,
@@ -162,7 +190,8 @@ h1, h2, h3, h4, h5, h6 {
 .dark::-webkit-scrollbar-thumb,
 .dark ::-webkit-scrollbar-thumb {
   background: var(--border-subtle);
-  border-radius: 4px;
+  border-radius: 5px;
+  border: 2px solid var(--bg-secondary);
 }
 
 .dark::-webkit-scrollbar-thumb:hover,
@@ -170,21 +199,25 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--text-tertiary);
 }
 
-/* Custom utilities */
+/* ═══════════════════════════════════════════════════════════════════════════
+   Custom Utilities & Effects
+   ═══════════════════════════════════════════════════════════════════════════ */
+
 .text-balance {
   text-wrap: balance;
 }
 
-/* Gradient text - adapts to theme */
-.light .gradient-text {
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-gold));
+/* Gradient text - Earth & Ember theme */
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-gold) 50%, var(--accent-moss) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.dark .gradient-text {
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-gold));
+/* Alternative gradient - terracotta to forest */
+.gradient-text-alt {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-forest) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -193,24 +226,136 @@ h1, h2, h3, h4, h5, h6 {
 /* Glass effect - adapts to theme */
 .glass {
   background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Card shadows for light mode */
-.light .card-shadow {
+/* Card shadows */
+.card-shadow {
   box-shadow: var(--shadow-md);
 }
 
-.dark .card-shadow {
-  box-shadow: none;
+.card-shadow:hover {
+  box-shadow: var(--shadow-lg);
 }
 
-/* Smooth transitions for theme changes */
+/* Organic blob shape for decorative elements */
+.organic-blob {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: blob-morph 8s ease-in-out infinite;
+}
+
+@keyframes blob-morph {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+}
+
+/* Floating animation for decorative elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+}
+
+.float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-medium {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Shimmer effect for premium feel */
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+  transform: translateX(-100%);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Button hover lift effect */
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Link underline animation */
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-primary);
+  transition: width 0.3s ease;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Decorative line */
+.deco-line {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-gold));
+  border-radius: 2px;
+}
+
+/* Section divider with organic feel */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--border-subtle) 20%,
+    var(--border-subtle) 80%,
+    transparent
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Smooth Transitions
+   ═══════════════════════════════════════════════════════════════════════════ */
+
 *, *::before, *::after {
-  transition-property: background-color, border-color, color, fill, stroke;
+  transition-property: background-color, border-color, color, fill, stroke, opacity;
   transition-timing-function: ease;
   transition-duration: 0.15s;
 }
@@ -218,4 +363,41 @@ h1, h2, h3, h4, h5, h6 {
 /* Disable transitions on page load to prevent flash */
 .no-transitions * {
   transition: none !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Typography Enhancements
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Stylised lead paragraphs */
+.lead {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+/* Pull quote styling */
+.pull-quote {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--text-primary);
+  border-left: 4px solid var(--accent-primary);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* Small caps for labels */
+.label-caps {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+}
+
+/* Invert logo in dark mode */
+.dark .logo-invert {
+  filter: invert(1);
 }

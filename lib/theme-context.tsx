@@ -12,7 +12,7 @@ interface ThemeContextType {
 
 // Provide a default context value for SSR
 const defaultContext: ThemeContextType = {
-  theme: "light",
+  theme: "dark",
   toggleTheme: () => {},
   setTheme: () => {},
 };
@@ -20,7 +20,7 @@ const defaultContext: ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType>(defaultContext);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>("light");
+  const [theme, setThemeState] = useState<Theme>("dark");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -30,8 +30,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     if (savedTheme) {
       setThemeState(savedTheme);
     } else {
-      // Default to light mode for this garden/landscaping site
-      setThemeState("light");
+      // Default to dark mode
+      setThemeState("dark");
     }
 
     setMounted(true);
