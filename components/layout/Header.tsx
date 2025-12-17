@@ -43,10 +43,10 @@ export function Header() {
       <Container>
         <nav className="flex items-center justify-between h-18 md:h-22">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <Logo className="h-11 w-auto transition-transform group-hover:scale-105" />
-            <div className="hidden sm:block">
-              <span className="text-xl font-semibold text-text-primary tracking-tight">
+          <Link href="/" className="flex items-center gap-2 sm:gap-3 group">
+            <Logo className="h-9 sm:h-11 w-auto transition-transform group-hover:scale-105" />
+            <div>
+              <span className="text-lg sm:text-xl font-semibold text-text-primary tracking-tight">
                 {siteConfig.name}
               </span>
               <p className="text-xs text-text-tertiary hidden md:block">
