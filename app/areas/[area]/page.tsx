@@ -9,6 +9,7 @@ import { ServiceCard } from "@/components/features/ServiceCard";
 import { ContactForm } from "@/components/features/ContactForm";
 import { CTABanner } from "@/components/features/CTABanner";
 import { LocalBusinessSchema } from "@/components/seo/LocalBusinessSchema";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 import { getAreaBySlug, getAllAreas, areasData } from "@/data/areas";
 import { services, areas as areasList, siteConfig } from "@/data/site";
 
@@ -70,6 +71,13 @@ export default async function AreaPage({ params }: Props) {
   return (
     <>
       <LocalBusinessSchema specificArea={area.slug} />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Areas", href: "/areas" },
+          { name: area.name, href: `/areas/${area.slug}` },
+        ]}
+      />
 
       {/* Hero Section */}
       <Section className="pt-24 md:pt-32">

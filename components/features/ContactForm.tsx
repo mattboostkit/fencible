@@ -32,8 +32,8 @@ export function ContactForm({ compact = false }: ContactFormProps) {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      // Formspark endpoint - replace YOUR_FORM_ID with actual ID
-      const response = await fetch("https://submit-form.com/YOUR_FORM_ID", {
+      // Formspark endpoint
+      const response = await fetch("https://submit-form.com/CLSVKvOHr", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -49,9 +49,7 @@ export function ContactForm({ compact = false }: ContactFormProps) {
         throw new Error("Failed to submit form");
       }
     } catch {
-      // For now, show success since Formspark ID isn't configured yet
-      setIsSubmitted(true);
-      form.reset();
+      setError("Something went wrong. Please try again or call us directly.");
     } finally {
       setIsSubmitting(false);
     }

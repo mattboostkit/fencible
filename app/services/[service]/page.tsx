@@ -8,6 +8,7 @@ import { Card } from "@/components/ui/Card";
 import { FAQAccordion, FAQSchema } from "@/components/features/FAQAccordion";
 import { ContactForm } from "@/components/features/ContactForm";
 import { CTABanner } from "@/components/features/CTABanner";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 import { getServiceBySlug, getAllServices } from "@/data/services";
 import { services as servicesList, siteConfig } from "@/data/site";
 
@@ -55,6 +56,13 @@ export default async function ServicePage({ params }: Props) {
   return (
     <>
       <FAQSchema faqs={service.faqs} />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Services", href: "/services" },
+          { name: service.title, href: `/services/${serviceSlug}` },
+        ]}
+      />
 
       {/* Hero Section */}
       <Section className="pt-24 md:pt-32">

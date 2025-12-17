@@ -14,7 +14,7 @@ export function LocalBusinessSchema({ specificArea }: LocalBusinessSchemaProps) 
     telephone: siteConfig.phone,
     email: siteConfig.email,
     image: `${siteConfig.url}/og-image.jpg`,
-    logo: `${siteConfig.url}/logo.svg`,
+    logo: `${siteConfig.url}/fencible_logo.svg`,
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.address.street,
