@@ -35,6 +35,9 @@ module.exports = {
     } else if (path === '/portfolio') {
       priority = 0.8;
       changefreq = 'weekly';
+    } else if (path === '/blog' || path.startsWith('/blog/')) {
+      priority = 0.8;
+      changefreq = 'weekly';
     } else if (path === '/about') {
       priority = 0.7;
       changefreq = 'monthly';
