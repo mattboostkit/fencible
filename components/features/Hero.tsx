@@ -23,7 +23,7 @@ export function Hero({
       {/* Background image with stronger overlay */}
       <div className="absolute inset-0">
         <Image
-          src="/images/portfolio/Newlawn.webp"
+          src="/images/portfolio/lawn-project.webp"
           alt="Beautiful new lawn installation by Fencible"
           fill
           priority
